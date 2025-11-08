@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 23% 98%;
+  --foreground: 222 47% 11%;
+  --muted: 216 33% 93%;
+  --muted-foreground: 222 19% 30%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --primary: 246 100% 63%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --accent: 187 100% 42%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --success: 144 61% 42%;
+  --success-foreground: 143 90% 96%;
+  --warning: 32 95% 53%;
+  --warning-foreground: 32 96% 92%;
+  --info: 205 100% 50%;
+  --info-foreground: 205 100% 96%;
+  --ring: 246 100% 63%;
+  --radius: 0.9rem;
+}
+
+.dark {
+  --background: 222 47% 8%;
+  --foreground: 210 40% 98%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 214 20% 65%;
+  --popover: 222 47% 10%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222 47% 10%;
+  --card-foreground: 210 40% 98%;
+  --border: 217 33% 20%;
+  --input: 217 33% 20%;
+  --primary: 246 100% 72%;
+  --primary-foreground: 222 47% 10%;
+  --secondary: 222 47% 12%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 187 100% 44%;
+  --accent-foreground: 222 47% 10%;
+  --destructive: 0 62% 51%;
+  --destructive-foreground: 210 40% 98%;
+  --success: 144 51% 46%;
+  --success-foreground: 143 92% 92%;
+  --warning: 32 92% 55%;
+  --warning-foreground: 32 96% 90%;
+  --info: 205 100% 60%;
+  --info-foreground: 205 100% 96%;
+  --ring: 246 100% 72%;
+  --radius: 0.9rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+a {
+  @apply text-sm font-medium text-muted-foreground transition-colors hover:text-foreground;
+}
+
+[data-theme-card] {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
